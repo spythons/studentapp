@@ -5,17 +5,19 @@
 </head>
 <body>
 Student profile
-{% extends 'base.html' %}
-{% block title %}Memberlist{% endblock %}
-{% block content %}
-  <ul>
-  {% for user in users %}
-    <li><a href="{{ user.url }}">{{ user.username }}</a></li>
-  {% endfor %}
-  </ul>
-{% endblock %}
 
 
+
+<form name="form" method="POST" action=".">
+		{% csrf_token %}
+		
+{{ form.as_p }}
+
+
+<!-- {{ form }}
+ -->
+ <input type="submit" name ="Submit" value ="submit">
+ </form>
 
 </body>
 </html>
