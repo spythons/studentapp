@@ -13,7 +13,8 @@ def home(request):
 		form = studentdetailsform(request.POST)
 		if form.is_valid():
 			form.save()
-			return render(request,'thanks.html')
+			message ="Thanks you for registering"
+			return render(request,'thanks.html',{'message':message})
 		else:
 			form = studentdetailsform()
 			return render(request,'home.html',{'form':form})
