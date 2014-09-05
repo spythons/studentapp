@@ -10,24 +10,30 @@ class studentdetailsform(forms.ModelForm):
 	# date = forms.DateField(widget=forms.TextInput(attrs={'class':'vDateField'}))
 	class Meta:
 		model = studentdetails
-		fields =['Name','Class','Admission_id','Gender','Nationality','Language','Category','Religion','Address','State','Country','Phone']
+		fields =['Admission_number','Admission_date','First_name','Middle_name','Last_name','Course_Batch','Date_of_birth','Gender','Blood_group','Birth_place','Nationality','Mother_tongue','Category','Religion','Address_line1','Address_line2','City','State']
 	helper = FormHelper()
 	helper.form_method ='POST'
 	helper.form_class = 'form-inline'
 	helper.field_template = 'bootstrap3/layout/inline_field.html'
 	helper.layout = Layout(
-		'Name',
-		'Class',
-		'Admission_id',
+		'Admission_number',
+		'Admission_date',
+		'First_name',
+		'Middle_name',
+		'Last_name',
+		'Course_Batch',
+		'Date_of_birth',
 		'Gender',
+		'Blood_group',
+		'Birth_place',
 		'Nationality',
-		'Language',
+		'Mother_tongue',
 		'Category',
 		'Religion',
-		'Address',
+		'Address_line1',
+		'Address_line2',
+		'City',
 		'State',
-		'Country',
-		'Phone',
 		FormActions(Submit('Submit','Submit', css_class='btn-primary'))
 		)
 

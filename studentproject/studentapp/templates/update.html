@@ -18,14 +18,14 @@ Student Details
  Personal Details 
 
 
-<form name="form" method="POST" action=".">
+<form name="form" method="POST" action="update.html">
 		{% csrf_token %}
 		
 <!-- {{ form.as_p }}
  -->
-{% crispy form %}
-<!-- {{ form }}
- -->
+<!-- {% crispy form %}
+ --> {{ form.as_p }}
+    <input type="submit" value="Update" />
  </form>
 
 </body>

@@ -1,0 +1,35 @@
+
+<html>
+<head>
+<title>Dispaly student form </title>
+
+</head>
+
+<body>
+<h1>
+	Student infomation form
+</h1>
+<ul>
+<table border="1">
+<tr>
+<td>Admission number</td>
+<td>First Name</td>
+<td>Gender</td>
+
+
+</tr>
+{% for i in stud_display %}
+<tr>
+<td> {{i.Admission_number}}</td>
+<td> {{i.First_name}}</td>
+<td> {{i.Gender}}</td>
+<td><a href="/updatestudent/{{i.id}}">edit </a></td>
+
+</tr>
+	
+{% endfor %}
+
+</table>
+</body>
+
+</html>
